@@ -1,4 +1,4 @@
-Learning the Anderson Impurity Model (LAIM) uses machine learning solve the Anderson Impurity Model.
+Data driven Dynamical Mean field Theory (D3MFT) uses machine learning solve the Anderson Impurity Model.
 
 For a quick install of this package, please make sure that you have the Anaconda package manager installed on your system, then simply run
 
@@ -8,4 +8,7 @@ Once installed, there are different examples in examples/ which can be run.
 
 All parameters in config.ini are explained in docs/config_file.txt
 
-For any questions please contact Evan Sheridan at: evan.sheridan@kcl.ac.uk.
+For any questions please contact 
+
+Evan Sheridan at: evan.sheridan@kcl.ac.uk.
+Zelong Zhao at : zelong.zhao@kcl.ac.uk
