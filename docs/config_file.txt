@@ -1,0 +1,41 @@
+[system]
+seedname = nn # name of calculation 
+root_dir = /home/evan/CODE/MY_PROJECTS/dmft_database/work/feb_2021/v1/code_v1/laim/laim/ # location of laim source code
+beta = 1 # inverse temperature
+basis = tau # basis 
+n_samples_per_file = 10 # number of samples in each database file
+n_files = 10 # number of files created
+tau_file = 201 # length of tau array in database
+tau_learn = 51 # size of G(tau) to be learned
+mpi = True # toggle switch for parallel behaviour 
+
+[database]
+U_= ["1.", "8."] # distribution of U 
+eps_=["-1.", "1."] # distribution of filling 
+D_=["2.", "8."] # distribution of bandwidth 
+V_=["0.75", "1.25"] # distribution of hybridisation
+N_=["3","3"] # number of bath sites
+n_iw = 1000 # number of matsubara frequencies 
+n_l = 7 # number of legendre polynomials
+poly_semilog = False # plot legendre polynomials on a semi-log scale
+database_distribution = True # plot the database distribution
+plot_hybrid_ = True # plot the hybridisation
+
+[AIM]
+writing = True # write the database
+solv_on = True # solve the AIM 
+solvers = ["PT", "SC", "ED_Q"] # solvers used
+
+[learn]
+optimizer = Nadam # neural network optimizer
+activation = elu # neural network activation function 
+learn_rate = 0.0002 neural network learning rate
+n_neurons = 51 # neural network neurons 
+n_hidden_layers = 2 # neural network depth 
+batch_size = 8 # neural network batch size 
+epochs = 100 # neural network epoch length 
+plotting = True # neural network plotting summary 
+n_val = 2 # number of files used for validation set 
+do_grid_search = False # neural network grid search 
+do_learning = True # learn the neural network
+do_prediction = False # do a prediction on the validation set 
